@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { a } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} shadow-sm`}>
       <div className="container-fluid d-flex justify-content-between align-items-center">
-        <Link className="navbar-brand fw-bold" to="/">
+        <a className="navbar-brand fw-bold" href="/">
           {props.title}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,50 +23,50 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto d-flex align-items-center">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">
+              <a className="nav-a active" href="/">
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <a className="nav-a" to="/about">
                 {props.aboutText}
-              </Link>
+              </a>
             </li>
 
             <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to="#"
+              <a
+                className="nav-a dropdown-toggle"
+                href="#"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 Dropdown
-              </Link>
+              </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
-                  <Link className="dropdown-item" to="/">
+                  <a className="dropdown-item" href="/">
                     Action
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/">
+                  <a className="dropdown-item" href="/">
                     Another action
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <Link className="dropdown-item" to="/">
+                  <a className="dropdown-item" href="/">
                     Something else here
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <span className="nav-link disabled" aria-disabled="true">
+              <span className="nav-a disabled" aria-disabled="true">
                 Disabled
               </span>
             </li>
